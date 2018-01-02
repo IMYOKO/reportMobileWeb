@@ -123,6 +123,11 @@ a, img {
 
 input, textarea, select {
   outline: none;
+  border: none;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
   color: #333;
   font-family: "Helvetica Neue", Helvetica, STHeiTi, Microsoft YaHei, sans-serif, Microsoft JhengHei, Arial;
 }
@@ -143,9 +148,122 @@ input {
   height: 0;
 }
 
+body {
+  min-width: 320px;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+::-webkit-input-placeholder {
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  line-height: 17px;
+}
+
+:-moz-placeholder {
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  line-height: 17px;
+}
+
+::-moz-placeholder {
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  line-height: 17px;
+}
+
+:-ms-input-placeholder {
+  vertical-align: middle;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  line-height: 17px;
+}
+
 /*
  * components scss
  */
+.form-wrapper {
+  padding: 30px 0 0;
+}
+
+.form-item {
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+}
+.form-item input {
+  width: 100%;
+  color: #fff;
+  font-size: 15px;
+  line-height: 17px;
+  padding: 12px 15px 12px 34px;
+  background: #323236;
+}
+.form-item i {
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 8px;
+}
+.form-item i.icon-phone {
+  background: url("../images/loding_tel.png") center center no-repeat;
+  background-size: contain;
+}
+.form-item i.icon-password {
+  background: url("../images/loding_mm.png") center center no-repeat;
+  background-size: contain;
+}
+
+.form-sumbit {
+  padding: 10px 0;
+}
+
+.form-sumbit-btn {
+  width: 100%;
+  height: 46px;
+  font-size: 18px;
+  color: #fff !important;
+  line-height: 46px;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  background: #2fc7b0;
+}
+
 /*
  * pages scss
  */
+.login-wrapper {
+  background: url("../images/login_bg.png") center center no-repeat;
+  background-size: cover;
+}
+
+.login-box {
+  padding: 90px 32px 0;
+}
+.login-box .login-img {
+  text-align: center;
+}
+.login-box .login-img p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 17px;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.login-link-box a {
+  color: #2fc7b0;
+  display: block;
+}
+.login-link-box a.left {
+  float: left;
+}
+.login-link-box a.right {
+  float: right;
+}

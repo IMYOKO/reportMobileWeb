@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+//common css
+body {
+    min-width: 320px;
+    max-width: 540px;
+    margin: 0 auto;
+}
+
+//背景图片
+@mixin background($url, $xpos, $ypos, $type){
+    background: url($url) $xpos $ypos no-repeat;
+    background-size: $type;
+}
+
+//字体
+@mixin font-size($color, $size, $lineHeight) {
+    color: $color;
+    font-size: $size;
+    line-height: $lineHeight;
+}
+
+//初始化input框的样式
+::-webkit-input-placeholder{
+    vertical-align: middle;
+    @include font-size($placeholderColor, 15px, 17px);
+}
+:-moz-placeholder{
+    vertical-align: middle;
+    @include font-size($placeholderColor, 15px, 17px);
+}
+::-moz-placeholder{
+    vertical-align: middle;
+    @include font-size($placeholderColor, 15px, 17px);
+}
+:-ms-input-placeholder{
+    vertical-align: middle;
+    @include font-size($placeholderColor, 15px, 17px);
+}

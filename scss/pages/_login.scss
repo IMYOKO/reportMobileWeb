@@ -1,0 +1,32 @@
+@charset "utf-8";
+$missPWColor: #2fc7b0;
+
+//login page
+.login-wrapper {
+    @include background('../images/login_bg.png', center, center, cover);
+}
+.login-box {
+    padding: 90px 32px 0;
+    .login-img {
+        text-align: center;
+        p {
+            color: #fff;
+            font-size: 15px;
+            line-height: 17px;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+    }
+}
+.login-link-box {
+    a {
+        color: $missPWColor;
+        display: block;
+        &.left {
+            float: left;
+        }
+        &.right {
+            float: right;
+        }
+    }
+}
