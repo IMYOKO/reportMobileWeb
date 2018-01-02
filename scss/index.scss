@@ -2,4 +2,16 @@
 /*
  * rest scss
  */
-@import '_rest';
+@import 'rest/_rest';
+
+/*
+ * components scss
+ */
+@import 'components/_button';
+
+/*
+ * pages scss
+ */
+@import 'pages/_login';
+
+

@@ -169,11 +169,14 @@ section, article, nav, aside, footer, header, div, p, ul, li, input, textarea {
     @extend %box-sizing;
 }
 html, body {
-    -webkit-user-select: none;
     /* 禁止选中文本 */
-    user-select: none;
-    -webkit-text-size-adjust: 100%;
+//  -moz-user-select: none;
+//  -webkit-user-select: none;
+//  -ms-user-select: none;
+//  -khtml-user-select: none;
+//  user-select: none;
     /* iphone禁用文字大小调整 */
+   -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
 html {
@@ -204,7 +207,7 @@ a img{
     border:0 none;
 }
 a, img {
-    -webkit-touch-callout: none;
+//  -webkit-touch-callout: none;
     /* 禁止长按链接与图片弹出菜单 */
 }
 input, textarea, select {

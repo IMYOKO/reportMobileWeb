@@ -77,11 +77,9 @@ section, article, nav, aside, footer, header, div, p, ul, li, input, textarea {
 }
 
 html, body {
-  -webkit-user-select: none;
   /* 禁止选中文本 */
-  user-select: none;
-  -webkit-text-size-adjust: 100%;
   /* iphone禁用文字大小调整 */
+  -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 
@@ -120,7 +118,6 @@ a img {
 }
 
 a, img {
-  -webkit-touch-callout: none;
   /* 禁止长按链接与图片弹出菜单 */
 }
 
@@ -145,3 +142,10 @@ input {
   clear: both;
   height: 0;
 }
+
+/*
+ * components scss
+ */
+/*
+ * pages scss
+ */
