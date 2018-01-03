@@ -17,6 +17,9 @@ $missPWColor: #2fc7b0;
             font-weight: bold;
         }
     }
+    &.register-box {
+        padding-top: 10px;
+    }
 }
 .login-link-box {
     a {
@@ -30,3 +33,5 @@ $missPWColor: #2fc7b0;
         }
     }
 }
+
+//注册页面

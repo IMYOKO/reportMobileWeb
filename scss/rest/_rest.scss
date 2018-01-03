@@ -89,6 +89,14 @@ $placeholderColor: rgba(255, 255, 255, .8);
     transform:$transform;
 }
 
+//水平垂直居中
+@mixin translate($translate...){
+    -webkit-transform: translate($translate);
+    -moz-transform: translate($translate);
+    -o-transform: translate($translate);
+    transform: translate($translate);
+}
+
 // 设置关键帧
 @mixin keyframes($name) {
     @-webkit-keyframes #{$name} {
@@ -200,7 +208,8 @@ a, div, p, span, ul, li, i, img, input, select {
 a:focus{
     outline:0;
 }
-a:link,a:visited{
+a:link,
+a:visited{
     color:$defaultColor;
     text-decoration:none;
 }

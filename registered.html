@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<meta name="keywords" content="" />
+    <meta name="description" content="" />
+	<title>注册</title>
+	<link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div class="login-wrapper">
+	<header class="login-header">
+		<a href="javascript:history.back(-1);" class="login-back">
+			<i class="back-01"></i>
+		</a>
+		<h1>注册</h1>
+	</header>
+	<div class="login-box register-box">
+		<div class="form-wrapper">
+			<div class="form-item form-item-register">
+				<i class="icon-phone"></i>
+				<input type="tel" name="phone" id="phone" placeholder="手机号码" />
+			</div>
+			<div class="form-item form-item-register">
+				<i class="icon-imgCode"></i>
+				<img src="images/img-code.png" class="img-code" width="95" height="32"/>
+				<input type="text" name="imgCode" id="imgCode" placeholder="图形验证码" />
+			</div>
+			<div class="form-item form-item-register">
+				<i class="icon-phoneCode"></i>
+				<a href="javascript:;" class="getPhone-code">获取验证码</a>
+				<input type="text" name="phoneCode" id="phoneCode" placeholder="手机验证码" />
+			</div>
+			<div class="form-item form-item-register">
+				<i class="icon-password"></i>
+				<input type="password" name="password" id="password" placeholder="请设置密码" />
+			</div>
+			<div class="form-sumbit form-sumbit-register">
+				<a href="javascript:;" class="form-sumbit-btn" onclick="upData();">确认</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--js star-->
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/msg.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var h = $(window).height();
+		$('.login-wrapper').css('height', h+'px');
+	})
+	
+	//提交表单
+	function upData(){
+		var phone = $('#phone').val();
+		var imgCode = $('#imgCode').val();
+		var phoneCode = $('#phoneCode').val();
+		var passWord = $('#password').val();
+		if(phone==''){
+			$.msg({msg:'请输入手机号码！',bgColor:'#2fc7b0'});
+			return false;
+		}else {
+			if(!isPhoneNum(phone)) {
+				$.msg({msg:'手机号码不正确！',bgColor:'#2fc7b0'});
+				return false;
+			}
+		}
+		if(imgCode==''){
+			$.msg({msg:'请输入图形验证码！',bgColor:'#2fc7b0'});
+			return false;
+		}
+		if(phoneCode==''){
+			$.msg({msg:'请输入手机验证码！',bgColor:'#2fc7b0'});
+			return false;
+		}
+		if(passWord==''){
+			$.msg({msg:'请输入密码！',bgColor:'#2fc7b0'});
+			return false;
+		}
+		//后续提交操作
+	}
+</script>
+<!--js end-->
+</body>
+</html>
+

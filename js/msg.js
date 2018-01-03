@@ -6,7 +6,8 @@
  * 参数说明
  * opt = {
  * 	msg: "这里是提示内容",  //这里是提示内容 
- *  time: 1  //默认显示1秒    可不填
+ *  time: 1,  //默认显示1秒    可不填
+ *  bgColor: 'rgba(0,0,0,.8)'   //默认背景色， 可不填
  * }
  * 
  * 使用说明  例：
@@ -19,11 +20,13 @@
 	function MsgPulgin(opt) {
 		this.defaults = {
 			msg: '',
-			time: 1
+			time: 1,
+			bgColor: 'rgba(0,0,0,.8)'
 		},
 		this.options =  $.extend({}, this.defaults, opt),
 		this.msg = this.options.msg,
 		this.time = this.options.time,
+		this.bgColor = this.options.bgColor,
 		this.init()
 	}
 	
@@ -39,7 +42,7 @@
 			}else{
 				this.createHtml();
 			}
-			this.hideHtml();
+			this.hideHtml(this.time);
 		},
 		
 		//创建节点
@@ -48,11 +51,12 @@
 								'<div class="msg-content">'+ this.msg +'</div>'+
 							'</div>';
 			$('body').append(msgHtml);
+			$('.msg-content').css('background',this.bgColor);
 		},
 		
-		//3秒后隐藏
-		hideHtml: function(){
-			var count = this.time;
+		//1秒后隐藏
+		hideHtml: function(t){
+			var count = t;
 			var interval = setInterval(function(){
 				count--;
 				if (count < 0) {

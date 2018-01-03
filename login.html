@@ -18,29 +18,51 @@
 		<div class="form-wrapper">
 			<div class="form-item">
 				<i class="icon-phone"></i>
-				<input type="tel" name="" id="" placeholder="请输入手机号码" />
+				<input type="tel" name="phone" id="phone" placeholder="请输入手机号码" />
 			</div>
 			<div class="form-item">
 				<i class="icon-password"></i>
-				<input type="password" name="" id="" placeholder="请输入密码" />
+				<input type="password" name="password" id="password" placeholder="请输入密码" />
 			</div>
 			<div class="form-sumbit">
-				<a href="javascript:;" class="form-sumbit-btn">登录</a>
+				<a href="javascript:;" class="form-sumbit-btn" onclick="upData();">登录</a>
 			</div>
 			<div class="login-link-box clearfix">
-				<a href="javascript:;" class="left">注册账号</a>
-				<a href="javascript:;" class="right">忘记密码</a>
+				<a href="registered.html" class="left">注册账号</a>
+				<a href="missPassWord.html" class="right">忘记密码</a>
 			</div>
 		</div>
 	</div>
 </div>
 <!--js star-->
 <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/msg.js"></script>
 <script type="text/javascript">
 	$(function(){
 		var h = $(window).height();
 		$('.login-wrapper').css('height', h+'px');
 	})
+	
+	//提交表单
+	function upData(){
+		var phone = $('#phone').val();
+		var passWord = $('#password').val();
+		if(phone==''){
+			$.msg({msg:'请输入手机号码！',bgColor:'#2fc7b0'});
+			return false;
+		}else {
+			if(!isPhoneNum(phone)) {
+				$.msg({msg:'手机号码不正确！',bgColor:'#2fc7b0'});
+				return false;
+			}
+		}
+		if(passWord==''){
+			$.msg({msg:'请输入密码！',bgColor:'#2fc7b0'});
+			return false;
+		}
+		//后续提交操作
+	}
 </script>
 <!--js end-->
 </body>

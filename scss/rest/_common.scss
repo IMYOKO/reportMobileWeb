@@ -37,3 +37,71 @@ body {
     vertical-align: middle;
     @include font-size($placeholderColor, 15px, 17px);
 }
+
+//报错弹窗
+.pop-msg-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    max-width: 50%;
+    @include translate(-50%, 0%);
+    z-index: 1000000;
+}
+.msg-content {
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 10px;
+}
+
+//header
+header {
+    height: 44px;
+    line-height: 44px;
+    padding: 0 9px;
+    color: #000;
+    position: relative;
+    background: #fff;
+    &.login-header {
+        color: #fff;
+        background: none;
+    }
+    h1 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    a {
+        position: absolute;
+        left: 9px;
+        display: block;
+        &.login-back {
+            top: 12px;
+        }
+        &.back {
+            top: 14px;
+        }
+        i {
+            display: block;
+            &.back-01 {
+                width: 20px;
+                height: 20px;
+                @include background('../images/loding_hh.png', center, center, contain);
+            }
+            &.go-back {
+                width: 46px;
+                height: 16px;
+                @include background('../images/back.png', center, center, contain);
+            }
+        }
+    }
+}
+
+//间距
+@mixin height($h, $b) {
+    height: $h;
+    background: $b;
+}
+
+.height-10 {
+    @include height(10px, #f6f3ff);
+}

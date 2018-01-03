@@ -13,7 +13,7 @@ $loginBgColor: #2fc7b0;
     input {
         width: 100%;
         @include font-size(#fff, 15px, 17px);
-        padding: 12px 15px 12px 34px;
+        padding: 15px 15px 14px 34px;
         background: $inputBgColor;
     }
     i {
@@ -21,14 +21,51 @@ $loginBgColor: #2fc7b0;
         height: 20px;
         display: block;
         position: absolute;
-        top: 12px;
+        top: 14px;
         left: 8px;
         &.icon-phone {
             @include background('../images/loding_tel.png', center, center, contain);
         }
+        &.icon-imgCode {
+            @include background('../images/loding_txm.png', center, center, contain);
+        }
         &.icon-password {
             @include background('../images/loding_mm.png', center, center, contain);
         }
+        &.icon-phoneCode {
+            @include background('../images/loding_yzm.png', center, center, contain);
+        }
+    }
+    &.form-item-register {
+        margin-bottom: 0;
+        input {
+            background: none;
+            border-bottom: 1px solid #dbd6d6;
+        }
+        i {
+            left: 0px;
+        }
+    }
+    .getPhone-code {
+        display: block;
+        width: 95px;
+        height: 32px;
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        line-height: 32px;
+        position: absolute;
+        right: 0;
+        top: 7px;
+        z-index: 1;
+        background: $loginBgColor;
+    }
+    .img-code {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 7px;
+        z-index: 1;
     }
 }
 
@@ -46,4 +83,50 @@ $loginBgColor: #2fc7b0;
     cursor: pointer;
     display: block;
     background: $loginBgColor;
+}
+.form-sumbit-register {
+    padding-top: 60px;
+}
+
+
+//list
+.list-item {
+    background: #fff;
+    padding-left: 20px;
+    li {
+        padding: 12px 20px 12px 0;
+        border-bottom: .5px solid #dbd6d6;
+        &:last-child {
+            border-bottom: .5px solid #fff;
+        }
+        .link-item {
+            width: 100%;
+            display: block;
+            .img-box {
+                width: 35px;
+                height: 35px;
+                overflow: hidden;
+                @include border-radius(35px);
+                float: left;
+                img {
+                    width: 35px;
+                    height: 35px;
+                    display: block;
+                }
+            }
+            .user-right {
+                margin-left: 50px;
+                h3 {
+                    @include font-size(#222, 14px, 16px);
+                }
+                p {
+                    margin-top: 3px;
+                    @include font-size(#666, 13px, 15px);
+                    span {
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
 }
