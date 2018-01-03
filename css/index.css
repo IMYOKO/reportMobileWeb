@@ -299,7 +299,7 @@ header a i.go-back {
 }
 .form-item.form-item-register input {
   background: none;
-  border-bottom: 1px solid #dbd6d6;
+  border-bottom: .5px solid #dbd6d6;
 }
 .form-item.form-item-register i {
   left: 0px;
