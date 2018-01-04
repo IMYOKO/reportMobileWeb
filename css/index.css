@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* 清除点击虚拟框 */
-a, div, p, span, ul, li, i, img, input, select {
+div, p, span, ul, li, i, img, input, select {
   outline: 0;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
@@ -147,6 +147,14 @@ input {
   content: "\200B";
   clear: both;
   height: 0;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
 }
 
 body {
@@ -206,12 +214,19 @@ header {
   line-height: 44px;
   padding: 0 9px;
   color: #000;
-  position: relative;
   background: #fff;
 }
 header.login-header {
   color: #fff;
+  position: relative;
   background: none;
+}
+header.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 header h1 {
   text-align: center;
@@ -220,13 +235,14 @@ header h1 {
 }
 header a {
   position: absolute;
-  left: 9px;
   display: block;
 }
 header a.login-back {
+  left: 9px;
   top: 12px;
 }
 header a.back {
+  left: 9px;
   top: 14px;
 }
 header a i {
@@ -244,9 +260,30 @@ header a i.go-back {
   background: url("../images/back.png") center center no-repeat;
   background-size: contain;
 }
+header a.header-right {
+  right: 9px;
+  top: 0px;
+  font-weight: bold;
+  font-size: 16px;
+}
 
 .height-10 {
   height: 10px;
+  background: #f6f3ff;
+}
+
+.height-44 {
+  height: 44px;
+  background: #f6f3ff;
+}
+
+.height-54 {
+  height: 54px;
+  background: #f6f3ff;
+}
+
+.height-60 {
+  height: 60px;
   background: #f6f3ff;
 }
 
@@ -551,4 +588,216 @@ body.has-color {
 }
 .login-link-box a.right {
   float: right;
+}
+
+.report-pages-wrapper .report-infor {
+  padding: 18px 25px 10px;
+  background: #fff;
+}
+.report-pages-wrapper .report-infor .user-infor {
+  position: relative;
+  padding: 8px 0 18px;
+  border-bottom: 0.5px solid #dbd6d6;
+}
+.report-pages-wrapper .report-infor .user-infor .user-img {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  border: 1px solid #dbd6d6;
+}
+.report-pages-wrapper .report-infor .user-infor .user-tel-infor {
+  position: relative;
+  padding-left: 70px;
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+  line-height: 18px;
+}
+.report-pages-wrapper .report-infor .user-infor .user-tel-infor h3 {
+  font-weight: bold;
+  padding: 5px 0 6px;
+}
+.report-pages-wrapper .report-infor .user-infor .user-tel-infor .tel-num {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -16px;
+  display: block;
+  width: 35px;
+  height: 35px;
+  background: url("../images/presentation_phone.png") center center no-repeat;
+  background-size: contain;
+}
+.report-pages-wrapper .report-infor .user-infor .report-results {
+  position: absolute;
+  bottom: -35px;
+  left: 40%;
+}
+.report-pages-wrapper .report-infor .report-num {
+  padding: 8px 0;
+}
+.report-pages-wrapper .report-infor .report-num span {
+  display: block;
+  color: #666;
+  font-size: 13px;
+  line-height: 18px;
+}
+.report-pages-wrapper .report-infor .report-num span:first-child {
+  float: left;
+}
+.report-pages-wrapper .report-infor .report-num span:last-child {
+  float: right;
+}
+.report-pages-wrapper .report-infor .report-num span img {
+  float: left;
+  margin-right: 4px;
+}
+.report-pages-wrapper .report-infor .user-message li {
+  padding: 4px 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 18px;
+}
+.report-pages-wrapper .report-infor .user-message li img {
+  float: left;
+  margin-right: 4px;
+}
+.report-pages-wrapper .report-infor .user-addr {
+  padding-bottom: 10px;
+  color: #666;
+  font-size: 13px;
+  line-height: 20px;
+}
+.report-pages-wrapper .report-infor .user-addr li {
+  padding: 4px 0;
+}
+.report-pages-wrapper .report-infor .user-addr li .left {
+  width: 5em;
+  float: left;
+}
+.report-pages-wrapper .report-infor .user-addr li .right {
+  padding-left: 5em;
+}
+.report-pages-wrapper .report-infor .report-time {
+  text-align: center;
+  color: #a2a2a2;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.user-data-list {
+  background: #fff;
+  padding-left: 15px;
+}
+.user-data-list li {
+  padding: 15px 15px 15px 0;
+  border-bottom: 0.5px solid #dbd6d6;
+}
+.user-data-list li:last-child {
+  border-bottom: .5px solid #fff;
+}
+.user-data-list li .data-item {
+  display: block;
+  height: 32px;
+  color: #333;
+  font-size: 16px;
+  line-height: 32px;
+}
+.user-data-list li .data-item span {
+  width: 32px;
+  height: 32px;
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+.user-data-list li .data-item span.icon-01 {
+  background: url("../images/bg_ziliao.png") center center no-repeat;
+  background-size: contain;
+}
+.user-data-list li .data-item span.icon-02 {
+  background: url("../images/bg_yunyings.png") center center no-repeat;
+  background-size: contain;
+}
+.user-data-list li .data-item span.icon-03 {
+  background: url("../images/bg_xxw.png") center center no-repeat;
+  background-size: contain;
+}
+.user-data-list li .data-item span.icon-04 {
+  background: url("../images/bg_tb.png") center center no-repeat;
+  background-size: contain;
+}
+.user-data-list li .data-item i {
+  width: 16px;
+  height: 16px;
+  display: block;
+  float: right;
+  margin-top: 8px;
+  background: url("../images/presentation_more.png") center center no-repeat;
+  background-size: contain;
+}
+
+.report-footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.report-footer-list {
+  height: 50px;
+}
+.report-footer-list li {
+  width: 25%;
+  height: 50px;
+  float: left;
+  background: #2fc7b1;
+}
+.report-footer-list li a {
+  color: #fff;
+  font-size: 13px;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 15px;
+  text-align: center;
+  display: block;
+  border-left: 1px solid #97e3d8;
+}
+.report-footer-list li:first-child a {
+  border-left: 1px solid #2fc7b1;
+}
+.report-footer-list li.active {
+  background: #0fa993;
+}
+.report-footer-list li.active a {
+  border-left: 1px solid #0fa993;
+}
+.report-footer-list li.active + li a {
+  border-left: 1px solid #2fc7b1;
+}
+
+.report-his-list {
+  background: #fff;
+  padding-left: 15px;
+}
+.report-his-list li {
+  color: #222;
+  height: 60px;
+  line-height: 60px;
+  font-size: 14px;
+  padding-right: 15px;
+  border-bottom: 0.5px solid #dbd6d6;
+}
+.report-his-list li:last-child {
+  border-bottom: .5px solid #fff;
+}
+.report-his-list li a {
+  display: block;
+}
+.report-his-list li a span {
+  color: #999;
+  float: right;
+  font-size: 12px;
 }

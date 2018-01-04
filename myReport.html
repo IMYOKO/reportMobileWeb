@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<meta name="keywords" content="" />
+    <meta name="description" content="" />
+	<title>报告详情</title>
+	<link rel="stylesheet" href="css/index.css"/>
+</head>
+<body class="has-color">
+<header class="header">
+	<a href="javascript:history.back(-1);" class="back">
+		<i class="go-back"></i>
+	</a>
+	<h1>报告详情</h1>
+	<a href="reportHistory.html" class="header-right">历史报告</a>
+</header>
+<div class="height-44"></div>
+<div class="report-pages-wrapper">
+	<div class="report-infor">
+		<div class="user-infor clearfix">
+			<div class="user-img float-left">
+				<img src="images/head.png" width="50" height="50"/>
+			</div>
+			<div class="user-tel-infor">
+				<h3>张三</h3>
+				<p>13039398475</p>
+				<a href="tel:13039398475" class="tel-num"></a>
+			</div>
+			<div class="report-results">
+				<img src="images/presentation_jj.png" width="75" height="50" alt=""/>
+			</div>
+		</div>
+		<div class="report-num clearfix">
+			<span><img src="images/presentation_browse.png" width="17" height="17"/>52人</span>
+			<span><img src="images/presentation_collection_n.png" width="17" height="17"/>加入收藏夹</span>
+		</div>
+		<ul class="user-message">
+			<li>
+				<img src="images/presentation_wx.png" width="17" height="17"/>YOKO
+			</li>
+			<li>
+				<img src="images/presentation_qq.png" width="17" height="17"/>752373772
+			</li>
+		</ul>
+		<ul class="user-addr">
+			<li class="clearfix">
+				<div class="left">
+					身份证号：
+				</div>
+				<div class="right">
+					362427199712171119
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="left">
+					学籍状态：
+				</div>
+				<div class="right">
+					本科/不在籍
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="left">
+					常住地址：
+				</div>
+				<div class="right">
+					湖南省长沙市岳麓区银盆岭绿地广场10020
+				</div>
+			</li>
+		</ul>
+		<div class="report-time">
+			报告日期：2017/12/15 12:00
+		</div>
+	</div>
+</div>
+<div class="height-10"></div>
+<ul class="user-data-list">
+	<li>
+		<a href="javascript:;" class="data-item">
+			<span class="icon-01"></span>个人资料<i></i>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="data-item">
+			<span class="icon-02"></span>运营商资料<i></i>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="data-item">
+			<span class="icon-03"></span>学信网资料<i></i>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="data-item">
+			<span class="icon-04"></span>电商资料<i></i>
+		</a>
+	</li>
+</ul>
+<div class="height-60"></div>
+<div class="report-footer">
+	<ul class="report-footer-list" id="report-footer-list">
+		<li>
+			<a href="javascript:;">标记审核</a>
+		</li>
+		<li class="active">
+			<a href="javascript:;">标记放款</a>
+		</li>
+		<li>
+			<a href="javascript:;">取消标记</a>
+		</li>
+		<li>
+			<a href="javascript:;">标记还款</a>
+		</li>
+	</ul>
+</div>
+
+<!--js star-->
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+	$('#report-footer-list li').each(function(){
+		$(this).click(function(){
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+		})
+	})
+</script>
+<!--js end-->
+</body>
+</html>

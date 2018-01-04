@@ -1,0 +1,213 @@
+@charset "utf-8";
+$lineColor: #dbd6d6;
+
+//myreport
+.report-pages-wrapper {
+    .report-infor {
+        padding: 18px 25px 10px;
+        background: #fff;
+        .user-infor {
+            position: relative;
+            padding: 8px 0 18px;
+            border-bottom: .5px solid $lineColor;
+            .user-img {
+                width: 50px;
+                height: 50px;
+                overflow: hidden;
+                @include border-radius(50px);
+                border: 1px solid $lineColor;
+            }
+            .user-tel-infor {
+                position: relative;
+                padding-left: 70px;
+                font-weight: bold;
+                @include font-size(#333, 16px, 18px);
+                h3 {
+                    font-weight: bold;
+                    padding: 5px 0 6px;
+                }
+                .tel-num {
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    margin-top: -16px;
+                    display: block;
+                    width: 35px;
+                    height: 35px;
+                    @include background('../images/presentation_phone.png', center, center, contain);
+                } 
+            }
+            .report-results {
+                position: absolute;
+                bottom: -35px;
+                left: 40%;
+            }
+        }
+        
+        //02
+        .report-num {
+            padding: 8px 0;
+            span {
+                display: block;
+                @include font-size(#666, 13px, 18px);
+                &:first-child {
+                    float: left;
+                }
+                &:last-child {
+                    float: right;
+                }
+                img {
+                    float: left;
+                    margin-right: 4px;
+                }
+            }
+        }
+        
+        //03
+        .user-message {
+            li {
+                padding: 4px 0;
+                @include font-size(#666, 13px, 18px);
+                img {
+                    float: left;
+                    margin-right: 4px;
+                }
+            }
+        }
+        
+        //04
+        .user-addr {
+            padding-bottom: 10px;
+            @include font-size(#666, 13px, 20px);
+            li {
+                padding: 4px 0;
+                .left {
+                    width: 5em;
+                    float: left;
+                }
+                .right {
+                    padding-left: 5em;
+                }
+            }
+        }
+        
+        //05
+        .report-time {
+            text-align: center;
+            @include font-size(#a2a2a2, 12px, 14px);
+        }
+    }
+}
+
+//
+.user-data-list {
+    background: #fff;
+    padding-left: 15px;
+    li {
+        padding: 15px 15px 15px 0;
+        border-bottom: .5px solid $lineColor;
+        &:last-child {
+            border-bottom: .5px solid #fff;
+        }
+        .data-item {
+            display: block;
+            height: 32px;
+            @include font-size(#333, 16px, 32px);
+            span {
+                width: 32px;
+                height: 32px;
+                display: block;
+                float: left;
+                margin-right: 10px;
+                &.icon-01 {
+                    @include background('../images/bg_ziliao.png', center, center, contain);
+                }
+                &.icon-02 {
+                    @include background('../images/bg_yunyings.png', center, center, contain);
+                }
+                &.icon-03 {
+                    @include background('../images/bg_xxw.png', center, center, contain);
+                }
+                &.icon-04 {
+                    @include background('../images/bg_tb.png', center, center, contain);
+                }
+            }
+            i {
+                width: 16px;
+                height: 16px;
+                display: block;
+                float: right;
+                margin-top: 8px;
+                @include background('../images/presentation_more.png', center, center, contain);
+            }
+        }
+    }
+}
+
+//footer
+.report-footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    &-list {
+        height: 50px;
+        li {
+            width: 25%;
+            height: 50px;
+            float: left;
+            background: #2fc7b1;
+            a {
+                color: #fff;
+                font-size: 13px;
+                height: 20px;
+                line-height: 20px;
+                margin-top: 15px;
+                text-align: center;
+                display: block;
+                border-left: 1px solid #97e3d8;
+            }
+            &:first-child {
+                a {
+                    border-left: 1px solid #2fc7b1;
+                }
+            }
+            &.active {
+                background: #0fa993;
+                a {
+                    border-left: 1px solid #0fa993;
+                }
+            }
+            &.active + li {
+                a {
+                    border-left: 1px solid #2fc7b1;
+                }
+            }
+        }
+    }
+}
+
+//历史报告
+.report-his-list {
+    background: #fff;
+    padding-left: 15px;
+    li {
+        color: #222;
+        height: 60px;
+        line-height: 60px;
+        font-size: 14px;
+        padding-right: 15px;
+        border-bottom: .5px solid $lineColor;
+        &:last-child {
+            border-bottom: .5px solid #fff;
+        }
+        a {
+            display: block;
+            span {
+                color: #999;
+                float: right;
+                font-size: 12px;
+            }
+        }
+    }
+}

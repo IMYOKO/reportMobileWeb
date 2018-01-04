@@ -59,11 +59,18 @@ header {
     line-height: 44px;
     padding: 0 9px;
     color: #000;
-    position: relative;
     background: #fff;
     &.login-header {
         color: #fff;
+        position: relative;
         background: none;
+    }
+    &.header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
     }
     h1 {
         text-align: center;
@@ -72,12 +79,13 @@ header {
     }
     a {
         position: absolute;
-        left: 9px;
         display: block;
         &.login-back {
+            left: 9px;
             top: 12px;
         }
         &.back {
+            left: 9px;
             top: 14px;
         }
         i {
@@ -93,6 +101,12 @@ header {
                 @include background('../images/back.png', center, center, contain);
             }
         }
+        &.header-right {
+            right: 9px;
+            top: 0px;
+            font-weight: bold;
+           font-size: 16px;
+        }
     }
 }
 
@@ -104,4 +118,13 @@ header {
 
 .height-10 {
     @include height(10px, #f6f3ff);
+}
+.height-44 {
+    @include height(44px, #f6f3ff);
+}
+.height-54 {
+    @include height(54px, #f6f3ff);
+}
+.height-60 {
+    @include height(60px, #f6f3ff);
 }
