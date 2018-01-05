@@ -5,17 +5,37 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
 	<meta name="keywords" content="" />
     <meta name="description" content="" />
-	<title>收藏夹</title>
+	<title>工作台</title>
 	<link rel="stylesheet" href="css/index.css"/>
 </head>
 <body class="has-color">
 <header class="header">
-	<a href="javascript:history.back(-1);" class="back">
-		<i class="go-back"></i>
-	</a>
-	<h1>收藏夹</h1>
+	<div class="midder-wrapper">
+		<a href="javascript:history.back(-1);" class="back">
+			<i class="go-back"></i>
+		</a>
+		<h1>工作台</h1>
+	</div>
 </header>
-<div class="height-54"></div>
+<div class="space-work-wrapper">
+	<div class="midder-wrapper">
+		<ul class="report-footer-list report-footer-list-top" id="report-footer-list">
+			<li>
+				<a href="javascript:;">审核中</a>
+			</li>
+			<li class="active">
+				<a href="javascript:;">已放款</a>
+			</li>
+			<li>
+				<a href="javascript:;">已拒绝</a>
+			</li>
+			<li>
+				<a href="javascript:;">已还款</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="height-94"></div>
 <ul class="list-item">
 	<li>
 		<a href="javascript:;" class="link-item clearfix">
@@ -61,11 +81,78 @@
 			</div>
 		</a>
 	</li>
+	<li>
+		<a href="javascript:;" class="link-item clearfix">
+			<div class="img-box">
+				<img src="images/user-img-01.png" width="35" height="35"/>
+			</div>
+			<div class="user-right">
+				<h3>张三</h3>
+				<p>13044487676 <span>2017/12/15 11:45</span></p>
+			</div>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="link-item clearfix">
+			<div class="img-box">
+				<img src="images/user-img-01.png" width="35" height="35"/>
+			</div>
+			<div class="user-right">
+				<h3>张三</h3>
+				<p>13044487676 <span>2017/12/15 11:45</span></p>
+			</div>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="link-item clearfix">
+			<div class="img-box">
+				<img src="images/user-img-01.png" width="35" height="35"/>
+			</div>
+			<div class="user-right">
+				<h3>张三</h3>
+				<p>13044487676 <span>2017/12/15 11:45</span></p>
+			</div>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="link-item clearfix">
+			<div class="img-box">
+				<img src="images/user-img-01.png" width="35" height="35"/>
+			</div>
+			<div class="user-right">
+				<h3>张三</h3>
+				<p>13044487676 <span>2017/12/15 11:45</span></p>
+			</div>
+		</a>
+	</li>
+	<li>
+		<a href="javascript:;" class="link-item clearfix">
+			<div class="img-box">
+				<img src="images/user-img-01.png" width="35" height="35"/>
+			</div>
+			<div class="user-right">
+				<h3>张三</h3>
+				<p>13044487676 <span>2017/12/15 11:45</span></p>
+			</div>
+		</a>
+	</li>
 </ul>
-<div class="height-10"></div>
-
+<div class="height-37"></div>
+<div class="my-space-wrapper">
+	<div class="midder-wrapper">
+		<a href="mySpace.html" class="my-space">我的空间：6/10</a>
+	</div>
+</div>
 <!--js star-->
 <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+	$('#report-footer-list li').each(function(){
+		$(this).click(function(){
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+		})
+	})
+</script>
 <!--js end-->
 </body>
 </html>

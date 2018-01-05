@@ -57,13 +57,10 @@ body {
 header {
     height: 44px;
     line-height: 44px;
-    padding: 0 9px;
     color: #000;
-    background: #fff;
     &.login-header {
         color: #fff;
         position: relative;
-        background: none;
     }
     &.header {
         width: 100%;
@@ -76,6 +73,7 @@ header {
         text-align: center;
         font-size: 18px;
         font-weight: bold;
+        background: #fff;
     }
     a {
         position: absolute;
@@ -110,6 +108,79 @@ header {
     }
 }
 
+//居中
+.midder-wrapper {
+    min-width: 320px;
+    max-width: 540px;
+    margin: 0 auto;
+    position: relative;
+}
+
+//四分间隔
+.report-footer-list {
+    height: 50px;
+    li {
+        width: 25%;
+        height: 50px;
+        float: left;
+        background: #2fc7b1;
+        a {
+            color: #fff;
+            font-size: 13px;
+            height: 20px;
+            line-height: 20px;
+            margin-top: 15px;
+            text-align: center;
+            display: block;
+            border-left: 1px solid #97e3d8;
+        }
+        &:first-child {
+            a {
+                border-left: 1px solid #2fc7b1;
+            }
+        }
+        &.active {
+            background: #0fa993;
+            a {
+                border-left: 1px solid #0fa993;
+            }
+        }
+        &.active + li {
+            a {
+                border-left: 1px solid #2fc7b1;
+            }
+        }
+    }
+    &-top {
+        li {
+            background: #e5e5e5;
+            a {
+                color: #999;
+                border-left: 1px solid #d9d9d9;
+            }
+            &:first-child {
+                color: #999;
+                a {
+                    border-left: 1px solid #e5e5e5;
+                }
+            }
+            &.active {
+                background: #e5e5e5;
+                border-bottom: 2px solid #2fc7b1;
+                a {
+                    color: #2fc7b1;
+                    border-left: 1px solid #d9d9d9;
+                }
+            }
+            &.active + li {
+                a {
+                    border-left: 1px solid #d9d9d9;
+                }
+            }
+        }
+    }
+}
+
 //间距
 @mixin height($h, $b) {
     height: $h;
@@ -118,6 +189,9 @@ header {
 
 .height-10 {
     @include height(10px, #f6f3ff);
+}
+.height-37 {
+    @include height(37px, #f6f3ff);
 }
 .height-44 {
     @include height(44px, #f6f3ff);
@@ -128,3 +202,7 @@ header {
 .height-60 {
     @include height(60px, #f6f3ff);
 }
+.height-94 {
+    @include height(94px, #f6f3ff);
+}
+

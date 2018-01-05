@@ -150,41 +150,6 @@ $lineColor: #dbd6d6;
     position: fixed;
     bottom: 0;
     left: 0;
-    &-list {
-        height: 50px;
-        li {
-            width: 25%;
-            height: 50px;
-            float: left;
-            background: #2fc7b1;
-            a {
-                color: #fff;
-                font-size: 13px;
-                height: 20px;
-                line-height: 20px;
-                margin-top: 15px;
-                text-align: center;
-                display: block;
-                border-left: 1px solid #97e3d8;
-            }
-            &:first-child {
-                a {
-                    border-left: 1px solid #2fc7b1;
-                }
-            }
-            &.active {
-                background: #0fa993;
-                a {
-                    border-left: 1px solid #0fa993;
-                }
-            }
-            &.active + li {
-                a {
-                    border-left: 1px solid #2fc7b1;
-                }
-            }
-        }
-    }
 }
 
 //历史报告
@@ -208,6 +173,93 @@ $lineColor: #dbd6d6;
                 float: right;
                 font-size: 12px;
             }
+        }
+    }
+}
+
+//我的空间
+.space-work-wrapper {
+    width: 100%;
+    position: fixed;
+    top: 44px;
+    left: 0;
+}
+
+.my-space-wrapper {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    .my-space {
+        width: 100%;
+        display: block;
+        height: 27px;
+        text-align: center;
+        background: #3286fe;
+        @include font-size(#fff, 12px, 27px);
+    }
+}
+
+.space-view-wrapper {
+    .space-capacity {
+        padding: 0 20px 25px;
+        background: #fff;
+        h2 {
+            padding: 25px 0 20px;
+            font-weight: bold;
+            @include font-size(#333, 18px, 20px);
+            span {
+                float: right;
+                @include font-size(#666, 16px, 20px);
+                em {
+                    font-style: normal;
+                }
+            }
+        }
+        .space-box {
+            position: relative;
+            .space-bg, .space-ing {
+                height: 12px;
+                background: #e1e0e0;
+                @include border-radius(12px);
+            }
+            .space-ing {
+                max-width: 100%;
+                background: #0067ff;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    
+    //购买空间
+    .buy-space-wrapper {
+        padding: 25px 20px 15px;
+        background: #fff;
+        h2 {
+            font-weight: bold;
+            @include font-size(#333, 18px, 20px);
+        }
+        .sell-space {
+            padding-top: 20px;
+        }
+    }
+}
+
+.sell-space-list {
+    li {
+        width: 33.33%;
+        float: left;
+        margin-bottom: 20px;
+        a {
+            display: block;
+            margin: 0 5px;
+            height: 44px;
+            text-align: center;
+            border: 1px solid #0067ff;
+            @include border-radius(3px);
+            @include font-size(#0067ff, 13px, 44px);
         }
     }
 }

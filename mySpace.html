@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<meta name="keywords" content="" />
+    <meta name="description" content="" />
+	<title>我的空间</title>
+	<link rel="stylesheet" href="css/index.css"/>
+</head>
+<body class="has-color">
+<header class="header">
+	<div class="midder-wrapper">
+		<a href="javascript:history.back(-1);" class="back">
+			<i class="go-back"></i>
+		</a>
+		<h1>我的空间</h1>
+	</div>
+</header>
+<div class="height-54"></div>
+<div class="space-view-wrapper">
+	<div class="space-capacity">
+		<h2>我的空间 <span>已用<em id="num">6</em>条/<em id="total">10</em>条</span></h2>
+		<div class="space-box">
+			<div class="space-ing" id="space-ing"></div>
+			<div class="space-bg"></div>
+		</div>
+	</div>
+	<div class="height-10"></div>
+	<div class="buy-space-wrapper">
+		<h2>购买空间</h2>
+		<div class="sell-space">
+			<ul class="sell-space-list clearfix">
+				<li>
+					<a href="javascript:;">10元/10条</a>
+				</li>
+				<li>
+					<a href="javascript:;">50元/50条</a>
+				</li>
+				<li>
+					<a href="javascript:;">100元/105条</a>
+				</li>
+				<li>
+					<a href="javascript:;">200元/210条</a>
+				</li>
+				<li>
+					<a href="javascript:;">300元/320条</a>
+				</li>
+				<li>
+					<a href="javascript:;">500元/540条</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!--js star-->
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript">
+	$('#report-footer-list li').each(function(){
+		$(this).click(function(){
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+		})
+	})
+	
+	//计算容量
+	function spaceWidth(){
+		var num = parseFloat($('#num').html());
+		var total = parseFloat($('#total').html());
+		var wid = num/total*100;
+		console.log(wid)
+		$('#space-ing').animate({'width': wid+'%'},1000);
+	}
+	spaceWidth();
+</script>
+<!--js end-->
+</body>
+</html>

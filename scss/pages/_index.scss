@@ -66,21 +66,39 @@ body{
                 border-bottom-left-radius: 0;
                 border-bottom-right-radius: 0;
                 @include background('../images/home_presentation_bg.png', center, center, cover);
-                h3 {
-                    padding: 10px 0 0 10px;
-                    @include font-size(#4ea49c, 12px, 14px);
+                .report-title {
+                    padding: 10px 15px 0;
+                    a {
+                        @include font-size(#4ea49c, 12px, 14px);
+                        &:last-child {
+                            color: #fff;
+                        }
+                    }  
                 }
                 .get-report {
                     padding-top: 14px;
-                    text-align: center;
-                    a {
-                        width: 100px;
-                        height: 28px;
-                        text-align: center;
-                        @include font-size(#fff, 14px, 28px);
-                        @include border-radius(28px);
-                        display: inline-block;
-                        border: 1px solid #fff;
+                    .search-report-wrapper {
+                        padding: 0 20px;
+                        position: relative;
+                        input {
+                            &[type=text] {
+                                width: 100%;
+                                padding: 11px 18px;
+                                background: rgba(0,0,0,.3);
+                                @include border-radius(36px);
+                                @include font-size(#fff, 13px, 15px);
+                            }
+                            &[type=button] {
+                                width: 65px;
+                                height: 30px;
+                                background: #249d9b;
+                                @include border-radius(30px);
+                                @include font-size(#fff, 13px, 15px);
+                                position: absolute;
+                                right: 24px;
+                                top: 4px;
+                            }
+                        }
                     }
                 }
             }
