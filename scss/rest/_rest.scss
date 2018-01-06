@@ -231,6 +231,12 @@ input {
     /* 清除 iphone 中 input 默认样式 */
     -webkit-appearance: none;
 }
+/* 清除 select 下拉箭头 */
+select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
 /* 清除浮动 */
 .clearfix {
     *zoom:1;

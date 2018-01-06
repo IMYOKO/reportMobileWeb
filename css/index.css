@@ -138,6 +138,13 @@ input {
   -webkit-appearance: none;
 }
 
+/* 清除 select 下拉箭头 */
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
 /* 清除浮动 */
 .clearfix {
   *zoom: 1;
@@ -161,34 +168,6 @@ body {
   min-width: 320px;
   max-width: 540px;
   margin: 0 auto;
-}
-
-::-webkit-input-placeholder {
-  vertical-align: middle;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 15px;
-  line-height: 17px;
-}
-
-:-moz-placeholder {
-  vertical-align: middle;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 15px;
-  line-height: 17px;
-}
-
-::-moz-placeholder {
-  vertical-align: middle;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 15px;
-  line-height: 17px;
-}
-
-:-ms-input-placeholder {
-  vertical-align: middle;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 15px;
-  line-height: 17px;
 }
 
 .pop-msg-wrapper {
@@ -361,6 +340,73 @@ header a.header-right {
   background: #f6f3ff;
 }
 
+.infor-input-list {
+  background: #fff;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+.infor-input-list li {
+  height: 50px;
+  line-height: 50px;
+  padding-right: 15px;
+  border-bottom: .5px solid #dbd6d6;
+}
+.infor-input-list li:last-child {
+  border-bottom: .5px solid #fff;
+}
+.infor-input-list li .left {
+  float: left;
+  color: #333;
+  font-size: 16px;
+  line-height: 50px;
+}
+.infor-input-list li .right {
+  width: 75%;
+  line-height: 50px;
+  text-align: right;
+  float: right;
+  position: relative;
+}
+.infor-input-list li .right input {
+  width: 100%;
+  display: block;
+  background: none;
+  padding-top: 14px;
+  text-align: right;
+  color: #333;
+  font-size: 16px;
+  line-height: 20px;
+}
+.infor-input-list li .right p {
+  color: #333;
+  font-size: 16px;
+  line-height: 50px;
+}
+
+.select-wrapper {
+  height: 50px;
+  float: right;
+}
+.select-wrapper select {
+  width: 4em;
+  float: left;
+  background: none;
+  direction: rtl;
+  padding-top: 14px;
+  text-align: right;
+  color: #333;
+  font-size: 16px;
+  line-height: 20px;
+}
+.select-wrapper select option {
+  text-align: center;
+}
+
+@media only screen and (min-width: 360px) {
+  .select-wrapper select {
+    width: 5em;
+  }
+}
 /*
  * components scss
  */
@@ -455,6 +501,35 @@ header a.header-right {
 
 .form-sumbit-register {
   padding-top: 60px;
+}
+
+.add-btn {
+  width: 100px;
+  height: 26px;
+  border: 1px solid #a2a9ab;
+  -webkit-border-radius: 26px;
+  -moz-border-radius: 26px;
+  -o-border-radius: 26px;
+  border-radius: 26px;
+  color: #666;
+  font-size: 14px;
+  line-height: 26px;
+  display: inline-block;
+}
+
+.border-radius-46 {
+  -webkit-border-radius: 46px;
+  -moz-border-radius: 46px;
+  -o-border-radius: 46px;
+  border-radius: 46px;
+}
+
+.button-wrapper {
+  padding: 30px 20px;
+}
+.button-wrapper-02 {
+  text-align: center;
+  padding: 10px 20px 0;
 }
 
 .list-item {
@@ -807,7 +882,7 @@ body.has-color {
   height: 32px;
   display: block;
   float: left;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 .user-data-list li .data-item span.icon-01 {
   background: url("../images/bg_ziliao.png") center center no-repeat;
@@ -825,14 +900,41 @@ body.has-color {
   background: url("../images/bg_tb.png") center center no-repeat;
   background-size: contain;
 }
+.user-data-list li .data-item span.icon-05 {
+  background: url("../images/bg_shiming.png") center center no-repeat;
+  background-size: contain;
+}
 .user-data-list li .data-item i {
-  width: 16px;
-  height: 16px;
   display: block;
   float: right;
   margin-top: 8px;
+}
+.user-data-list li .data-item i.next {
+  width: 16px;
+  height: 16px;
   background: url("../images/presentation_more.png") center center no-repeat;
   background-size: contain;
+}
+.user-data-list li .data-item i.ok {
+  width: 50px;
+  height: 16px;
+  margin-right: 2px;
+  background: url("../images/credit_name_s.png") center center no-repeat;
+  background-size: contain;
+}
+.user-data-list li .data-item i.no {
+  width: 50px;
+  height: 16px;
+  margin-right: 2px;
+  background: url("../images/credit_name_n.png") center center no-repeat;
+  background-size: contain;
+}
+.user-data-list li .data-item em {
+  font-style: normal;
+  margin-left: 5px;
+  color: #999;
+  font-size: 14px;
+  line-height: 32px;
 }
 
 .report-footer {
@@ -1124,5 +1226,34 @@ body.has-color {
 .pie-chart p {
   color: #999;
   font-size: 12px;
+  line-height: 16px;
+}
+
+.business-nav {
+  background: #fff;
+}
+.business-nav li {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+.business-nav li a {
+  font-weight: bold;
+  display: inline-block;
+  padding: 0 10px;
+  color: #999;
+  font-size: 16px;
+  line-height: 38px;
+}
+.business-nav li.active a {
+  color: #2fc7b1;
+  border-bottom: 2px solid #2fc7b1;
+}
+
+.business-tips {
+  padding-top: 10px;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
   line-height: 16px;
 }

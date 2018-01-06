@@ -87,7 +87,29 @@ $loginBgColor: #2fc7b0;
 .form-sumbit-register {
     padding-top: 60px;
 }
+//新增一条
+.add-btn {
+    width: 100px;
+    height: 26px;
+    border: 1px solid #a2a9ab;
+    @include border-radius(26px);
+    @include font-size(#666,14px,26px);
+    display: inline-block;
+}
 
+//圆角
+.border-radius-46 {
+    @include border-radius(46px);
+}
+
+//生成报告
+.button-wrapper {
+    padding: 30px 20px;
+    &-02 {
+        text-align: center;
+        padding: 10px 20px 0;
+    }
+}
 
 //list
 .list-item {

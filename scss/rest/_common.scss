@@ -21,22 +21,22 @@ body {
 }
 
 //初始化input框的样式
-::-webkit-input-placeholder{
-    vertical-align: middle;
-    @include font-size($placeholderColor, 15px, 17px);
-}
-:-moz-placeholder{
-    vertical-align: middle;
-    @include font-size($placeholderColor, 15px, 17px);
-}
-::-moz-placeholder{
-    vertical-align: middle;
-    @include font-size($placeholderColor, 15px, 17px);
-}
-:-ms-input-placeholder{
-    vertical-align: middle;
-    @include font-size($placeholderColor, 15px, 17px);
-}
+//::-webkit-input-placeholder{
+//  vertical-align: middle;
+//  @include font-size($placeholderColor, 15px, 17px);
+//}
+//:-moz-placeholder{
+//  vertical-align: middle;
+//  @include font-size($placeholderColor, 15px, 17px);
+//}
+//::-moz-placeholder{
+//  vertical-align: middle;
+//  @include font-size($placeholderColor, 15px, 17px);
+//}
+//:-ms-input-placeholder{
+//  vertical-align: middle;
+//  @include font-size($placeholderColor, 15px, 17px);
+//}
 
 //报错弹窗
 .pop-msg-wrapper {
@@ -209,3 +209,66 @@ header {
     @include height(94px, #f6f3ff);
 }
 
+
+//资料填写
+.infor-input-list {
+    background: #fff;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    li {
+        height: 50px;
+        line-height: 50px;
+        padding-right: 15px;
+        border-bottom: .5px solid #dbd6d6;
+        &:last-child {
+            border-bottom: .5px solid #fff;
+        }
+        .left {
+            float: left;
+            @include font-size(#333,16px,50px);
+        }
+        .right {
+            width: 75%;
+            line-height: 50px;
+            text-align: right;
+            float: right;
+            position: relative;
+            input {
+                width: 100%;
+                display: block;
+                background: none;
+                padding-top: 14px;
+                text-align: right;
+                @include font-size(#333,16px,20px);
+            }
+            p {
+                @include font-size(#333,16px,50px);
+            }
+        }
+    }
+}
+
+.select-wrapper {
+    height: 50px;
+    float: right;
+    select {
+        width: 4em;
+        float: left;
+        background: none;
+        direction: rtl;
+        padding-top: 14px;
+        text-align: right;
+        @include font-size(#333,16px,20px);
+        option {
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (min-width: 360px) {
+    .select-wrapper {
+        select {
+            width: 5em;
+        }
+    }
+}

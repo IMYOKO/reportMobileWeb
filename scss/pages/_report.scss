@@ -118,7 +118,7 @@ $lineColor: #dbd6d6;
                 height: 32px;
                 display: block;
                 float: left;
-                margin-right: 10px;
+                margin-right: 8px;
                 &.icon-01 {
                     @include background('../images/bg_ziliao.png', center, center, contain);
                 }
@@ -131,14 +131,36 @@ $lineColor: #dbd6d6;
                 &.icon-04 {
                     @include background('../images/bg_tb.png', center, center, contain);
                 }
+                &.icon-05 {
+                    @include background('../images/bg_shiming.png', center, center, contain);
+                }
             }
             i {
-                width: 16px;
-                height: 16px;
                 display: block;
                 float: right;
                 margin-top: 8px;
-                @include background('../images/presentation_more.png', center, center, contain);
+                &.next{
+                    width: 16px;
+                    height: 16px;
+                    @include background('../images/presentation_more.png', center, center, contain);
+                }
+                &.ok {
+                    width: 50px;
+                    height: 16px;
+                    margin-right: 2px;
+                    @include background('../images/credit_name_s.png', center, center, contain);
+                }
+                &.no {
+                    width: 50px;
+                    height: 16px;
+                    margin-right: 2px;
+                    @include background('../images/credit_name_n.png', center, center, contain);
+                }
+            }
+            em {
+                font-style: normal;
+                margin-left: 5px;
+                @include font-size(#999, 14px, 32px);
             }
         }
     }
@@ -424,4 +446,34 @@ $lineColor: #dbd6d6;
     p {
         @include font-size(#999,12px,16px);
     }
+}
+
+
+//电商报告
+.business-nav {
+    background: #fff;
+    li {
+        width: 50%;
+        float: left;
+        text-align: center;
+        a {
+            font-weight: bold;
+            display: inline-block;
+            padding: 0 10px;
+            @include font-size(#999,16px,38px);
+        }
+        &.active {
+            a {
+                color: #2fc7b1;
+                border-bottom: 2px solid #2fc7b1;
+            }
+        }
+    }
+}
+
+//电商认证
+.business-tips {
+    padding-top: 10px;
+    text-align: center;
+    @include font-size(#999,14px,16px);
 }
