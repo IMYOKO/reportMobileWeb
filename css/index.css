@@ -225,6 +225,9 @@ header.header {
   left: 0;
   z-index: 10;
 }
+header.header h1 {
+  border-bottom: .5px solid #e5e5e5;
+}
 header h1 {
   text-align: center;
   font-size: 18px;
@@ -768,11 +771,11 @@ body.has-color {
   padding: 4px 0;
 }
 .report-pages-wrapper .report-infor .user-addr li .left {
-  width: 5em;
+  width: 5.5em;
   float: left;
 }
 .report-pages-wrapper .report-infor .user-addr li .right {
-  padding-left: 5em;
+  padding-left: 5.5em;
 }
 .report-pages-wrapper .report-infor .report-time {
   text-align: center;
@@ -957,4 +960,169 @@ body.has-color {
   color: #0067ff;
   font-size: 13px;
   line-height: 44px;
+}
+
+.user-data-wrapper {
+  padding: 0 12px 15px;
+  background: #fff;
+  margin-bottom: 10px;
+}
+.user-data-wrapper .user-data-title {
+  color: #2fc7b1;
+  height: 45px;
+  line-height: 45px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 5px;
+  border-bottom: .5px solid #2fc7b1;
+}
+.user-data-wrapper .user-data-title img {
+  float: left;
+  margin-right: 6px;
+  margin-top: 12px;
+}
+
+.user-infor-list {
+  padding: 8px 5px;
+}
+.user-infor-list.line {
+  border-top: .5px dashed #ccc;
+}
+.user-infor-list li {
+  font-weight: bold;
+  padding: 8px 0;
+}
+.user-infor-list li .left {
+  float: left;
+  color: #b6b6b6;
+  font-size: 16px;
+  line-height: 20px;
+}
+.user-infor-list li .right {
+  text-align: right;
+  float: right;
+  max-width: 70%;
+}
+.user-infor-list li .right p.infor {
+  color: #333;
+  font-size: 16px;
+  line-height: 20px;
+}
+.user-infor-list li .right p.infor.addr {
+  text-align: left;
+}
+.user-infor-list li .right p.tips {
+  margin-top: 2px;
+  color: #01a854;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: normal;
+}
+.user-infor-list li .right p.tips i {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  margin-bottom: -2px;
+  display: inline-block;
+}
+.user-infor-list li .right p.tips.success i {
+  background: url("../images/id_gouxuan.png") center center no-repeat;
+  background-size: contain;
+}
+.user-infor-list li .right p.tips.err {
+  color: #ffae00;
+}
+.user-infor-list li .right p.tips.err i {
+  background: url("../images/id_tishi.png") center center no-repeat;
+  background-size: contain;
+}
+
+.id-card-wrapper h4 {
+  padding-bottom: 12px;
+  color: #9e9e9e;
+  font-size: 12px;
+  line-height: 14px;
+}
+.id-card-wrapper h4 span {
+  color: #01a854;
+}
+
+.id-card-list li {
+  width: 50%;
+  float: left;
+}
+.id-card-list li .id-img {
+  padding: 0 5px;
+}
+.id-card-list li .id-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.id-card-wrapper-02 {
+  padding: 15px 0;
+}
+.id-card-wrapper-02 p {
+  text-align: center;
+  padding-top: 10px;
+  color: #9e9e9e;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.phone-list {
+  font-weight: bold;
+  text-align: center;
+}
+.phone-list p {
+  height: 55px;
+  color: #666;
+  font-size: 16px;
+  line-height: 55px;
+  border-bottom: .5px dashed #ccc;
+}
+.phone-list a {
+  display: block;
+  color: #2fc7b1;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.userData-table {
+  width: 100%;
+  text-align: center;
+}
+.userData-table thead tr {
+  background: #2fc7b1;
+}
+.userData-table thead tr th {
+  height: 44px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 44px;
+}
+.userData-table tbody tr td {
+  height: 44px;
+  color: #333;
+  font-size: 12px;
+  line-height: 44px;
+}
+.userData-table tbody tr:nth-child(odd) {
+  background: #f1f1f1;
+}
+
+.pie-chart {
+  text-align: center;
+  padding: 20px 0;
+}
+.pie-chart h4 {
+  color: #999;
+  font-size: 12px;
+  line-height: 16px;
+}
+.pie-chart p {
+  color: #999;
+  font-size: 12px;
+  line-height: 16px;
 }

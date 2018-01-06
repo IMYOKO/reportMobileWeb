@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<meta name="keywords" content="" />
+    <meta name="description" content="" />
+	<title>运营商报告</title>
+	<link rel="stylesheet" href="css/index.css"/>
+</head>
+<body class="has-color">
+<header class="header">
+	<div class="midder-wrapper">
+		<a href="javascript:history.back(-1);" class="back">
+			<i class="go-back"></i>
+		</a>
+		<h1>运营商报告</h1>
+		<a href="javascript:;" class="header-right">生成图片</a>
+	</div>
+</header>
+<div class="height-54"></div>
+<!--01 star-->
+<div class="user-data-wrapper">
+	<div class="user-data-title">
+		<img src="images/id_idcadr.png" width="21" height="21"/>基本信息
+	</div>
+	<ul class="user-infor-list">
+		<li class="clearfix">
+			<div class="left">
+				姓名
+			</div>
+			<div class="right">
+				<p class="infor">张三</p>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="left">
+				身份证号
+			</div>
+			<div class="right">
+				<p class="infor">430681199910003215</p>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="left">
+				手机号码
+			</div>
+			<div class="right">
+				<p class="infor">13049492345</p>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="left">
+				入网时间
+			</div>
+			<div class="right">
+				<p class="infor">2012-12-23</p>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="left">
+				话费余额
+			</div>
+			<div class="right">
+				<p class="infor">222元</p>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="left">
+				手机状态
+			</div>
+			<div class="right">
+				<p class="infor">正常</p>
+			</div>
+		</li>
+	</ul>
+</div>
+<!--01 end-->
+<!--欺诈风险 star-->
+<div class="user-data-wrapper">
+	<div class="user-data-title">
+		<img src="images/phone_qizha.png" width="21" height="21"/>欺诈风险
+	</div>
+	<ul class="user-infor-list">
+		<li class="clearfix">
+			<div class="left">
+				入网地址
+			</div>
+			<div class="right">
+				<p class="infor">浙江杭州</p>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="left">
+				活跃地区
+			</div>
+			<div class="right">
+				<p class="infor">广东深圳</p>
+				<p class="tips err"><i></i>登记地址与常通话地址不一致</p>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="left">
+				联系人最多地区
+			</div>
+			<div class="right">
+				<p class="infor">浙江杭州</p>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="left">
+				最近通话时间
+			</div>
+			<div class="right">
+				<p class="infor addr">2018-01-05</p>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="left">
+				互通号码数量
+			</div>
+			<div class="right">
+				<p class="infor">150</p>
+				<p class="tips success"><i></i>互通号码数量正常</p>
+			</div>
+		</li>
+	</ul>
+</div>
+<!--欺诈风险 end-->
+<!--运营商消费分析 star-->
+<div class="user-data-wrapper">
+	<div class="user-data-title">
+		<img src="images/phone_xiaofei.png" width="21" height="21"/>运营商消费分析
+	</div>
+	<div class="user-data-table">
+		<table class="userData-table" cellspacing="0">
+			<thead>
+				<tr>
+					<th>月份</th>
+					<th>主叫时间(秒)</th>
+					<th>被叫时间(秒)</th>
+					<th>通话话费(元)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>2017-09</td>
+					<td>2187.87</td>
+					<td>2187.87</td>
+					<td>136.98</td>
+				</tr>
+				<tr>
+					<td>2017-09</td>
+					<td>2187.87</td>
+					<td>2187.87</td>
+					<td>136.98</td>
+				</tr>
+				<tr>
+					<td>2017-09</td>
+					<td>2187.87</td>
+					<td>2187.87</td>
+					<td>136.98</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!--运营商消费分析 end-->
+<!--通话区域统计 star-->
+<div class="user-data-wrapper">
+	<div class="user-data-title">
+		<img src="images/id_weizhi.png" width="21" height="21"/>通话区域统计
+	</div>
+	<div class="pie-chart">
+		<h4>各地区通话活跃天数分布</h4>
+		<div id="callAdder-01" style="width: 100%; height: 260px; display: inline-block;"></div>
+		<p>通话活跃指当天（00:00:00-23:59:59）至少有1次通话</p>
+	</div>
+	<div class="user-data-table">
+		<table class="userData-table" cellspacing="0">
+			<thead>
+				<tr>
+					<th>地区</th>
+					<th>活跃天数</th>
+					<th>通话次数</th>
+					<th>通话时长</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>广东深圳</td>
+					<td>34</td>
+					<td>45</td>
+					<td>136.98</td>
+				</tr>
+				<tr>
+					<td>广东深圳</td>
+					<td>34</td>
+					<td>45</td>
+					<td>136.98</td>
+				</tr>
+				<tr>
+					<td>广东深圳</td>
+					<td>34</td>
+					<td>45</td>
+					<td>136.98</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!--通话区域统计 end-->
+<!--高频联系人 star-->
+<div class="user-data-wrapper">
+	<div class="user-data-title">
+		<img src="images/id_weizhi.png" width="21" height="21"/>高频联系人
+	</div>
+	<div class="user-data-table">
+		<table class="userData-table" cellspacing="0">
+			<thead>
+				<tr>
+					<th>手机号码</th>
+					<th>归属地</th>
+					<th>主叫/被叫(次)</th>
+					<th>互联网标识</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>13049492345</td>
+					<td>广东深圳</td>
+					<td>45/98</td>
+					<td>未知</td>
+				</tr>
+				<tr>
+					<td>13049492345</td>
+					<td>广东深圳</td>
+					<td>45/98</td>
+					<td>未知</td>
+				</tr>
+				<tr>
+					<td>13049492345</td>
+					<td>广东深圳</td>
+					<td>45/98</td>
+					<td>未知</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!--高频联系人 end-->
+<!--风险联系人 star-->
+<div class="user-data-wrapper">
+	<div class="user-data-title">
+		<img src="images/id_weizhi.png" width="21" height="21"/>风险联系人
+	</div>
+	<div class="user-data-table">
+		<table class="userData-table" cellspacing="0">
+			<thead>
+				<tr>
+					<th>昵称</th>
+					<th>通话次数</th>
+					<th>通话时长(次)</th>
+					<th>通话号码数量</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>小贷公司</td>
+					<td>50</td>
+					<td>459.28</td>
+					<td>1534</td>
+				</tr>
+				<tr>
+					<td>小贷公司</td>
+					<td>50</td>
+					<td>459.28</td>
+					<td>1534</td>
+				</tr>
+				<tr>
+					<td>小贷公司</td>
+					<td>50</td>
+					<td>459.28</td>
+					<td>1534</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!--风险联系人 end-->
+<!--金融机构联系人 star-->
+<div class="user-data-wrapper">
+	<div class="user-data-title">
+		<img src="images/id_weizhi.png" width="21" height="21"/>金融机构联系人
+	</div>
+	<div class="user-data-table">
+		<table class="userData-table" cellspacing="0">
+			<thead>
+				<tr>
+					<th>昵称</th>
+					<th>通话次数</th>
+					<th>通话时长(次)</th>
+					<th>通话号码数量</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>银行</td>
+					<td>50</td>
+					<td>459.28</td>
+					<td>1534</td>
+				</tr>
+				<tr>
+					<td>投资理财</td>
+					<td>50</td>
+					<td>459.28</td>
+					<td>1534</td>
+				</tr>
+				<tr>
+					<td>保险</td>
+					<td>50</td>
+					<td>459.28</td>
+					<td>1534</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+<!--金融机构联系人 end-->
+<!--通话数量 star-->
+<div class="user-data-wrapper">
+	<div class="user-data-title">
+		<img src="images/phone_tonghua.png" width="21" height="21"/>通话数量
+	</div>
+	<div class="user-data-table">
+		<table class="userData-table" cellspacing="0">
+			<thead>
+				<tr>
+					<th>号码</th>
+					<th>归属地</th>
+					<th>通话次数</th>
+					<th>通话时长(次)</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>13049492345</td>
+					<td>广东深圳</td>
+					<td>128</td>
+					<td>459.28</td>
+				</tr>
+				<tr>
+					<td>13049492345</td>
+					<td>广东深圳</td>
+					<td>128</td>
+					<td>459.28</td>
+				</tr>
+				<tr>
+					<td>13049492345</td>
+					<td>广东深圳</td>
+					<td>128</td>
+					<td>459.28</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="phone-list">
+		<p style="height: 20px;"></p>
+		<a href="javascript:;">查询全部通话详情</a>
+	</div>
+</div>
+<!--通话数量 end-->
+<!--js star-->
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="js/echarts.js"></script>
+<script type="text/javascript" src="js/callAdder-01.js"></script>
+<!--js end-->
+</body>
+</html>
