@@ -69,6 +69,7 @@ header {
         left: 0;
         z-index: 10;
         h1 {
+            background: #fff;
             border-bottom: .5px solid #e5e5e5;
         }
     }
@@ -76,7 +77,6 @@ header {
         text-align: center;
         font-size: 18px;
         font-weight: bold;
-        background: #fff;
     }
     a {
         position: absolute;
@@ -271,4 +271,8 @@ header {
             width: 5em;
         }
     }
+}
+
+.color-999 {
+    color: #999 !important;
 }

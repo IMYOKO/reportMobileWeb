@@ -477,3 +477,47 @@ $lineColor: #dbd6d6;
     text-align: center;
     @include font-size(#999,14px,16px);
 }
+
+
+//发送好友
+.send-friend-wrapper {
+    padding: 10px 30px 30px;
+    .send-friend-box {
+        background: #fff;
+        overflow: hidden;
+        margin-bottom: 20px;
+        @include border-radius(10px);
+        @include box-shadow(0px 0px 8px rgba(0, 0, 0, 0.1));
+        .user-xx-top {
+            padding: 25px 30px;
+            border-bottom: 2px solid #f6f3ff;
+            .user-img {
+                width: 37px;
+                height: 37px;
+                @include border-radius(37px);
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+            }
+            .user-name {
+                font-weight: bold;
+                @include font-size(#333,14px,37px);
+            }
+        }
+        .midder-code {
+            text-align: center;
+            padding: 25px 0;
+            .code {
+                display: inline-block;
+            }
+        }
+        .footer-tips {
+            text-align: center;
+            font-weight: bold;
+            border-top: 2px solid #f6f3ff;
+            @include font-size(#333,14px,68px);
+        }
+    }
+}

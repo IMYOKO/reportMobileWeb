@@ -1,6 +1,7 @@
 @charset "utf-8";
 $inputBgColor: #323236;
 $loginBgColor: #2fc7b0;
+$walletBgColor: #467af1;
 
 //form
 .form-wrapper {
@@ -87,6 +88,22 @@ $loginBgColor: #2fc7b0;
 .form-sumbit-register {
     padding-top: 60px;
 }
+//钱包按钮背景色
+.walletBgColor {
+    background: $walletBgColor;
+}
+
+//解绑银行卡
+.bank-card-btn {
+    width: 170px;
+    height: 48px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid #999;
+    @include border-radius(48px);
+    @include font-size(#666,15px,48px);
+}
+
 //新增一条
 .add-btn {
     width: 100px;
@@ -101,13 +118,21 @@ $loginBgColor: #2fc7b0;
 .border-radius-46 {
     @include border-radius(46px);
 }
+.border-radius-5 {
+    @include border-radius(5px);
+}
 
 //生成报告
 .button-wrapper {
+    text-align: center;
     padding: 30px 20px;
     &-02 {
         text-align: center;
         padding: 10px 20px 0;
+    }
+    &-03 {
+        text-align: center;
+        padding-top: 5px;
     }
 }
 

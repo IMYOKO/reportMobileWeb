@@ -205,13 +205,13 @@ header.header {
   z-index: 10;
 }
 header.header h1 {
+  background: #fff;
   border-bottom: .5px solid #e5e5e5;
 }
 header h1 {
   text-align: center;
   font-size: 18px;
   font-weight: bold;
-  background: #fff;
 }
 header a {
   position: absolute;
@@ -407,6 +407,10 @@ header a.header-right {
     width: 5em;
   }
 }
+.color-999 {
+  color: #999 !important;
+}
+
 /*
  * components scss
  */
@@ -503,6 +507,25 @@ header a.header-right {
   padding-top: 60px;
 }
 
+.walletBgColor {
+  background: #467af1;
+}
+
+.bank-card-btn {
+  width: 170px;
+  height: 48px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #999;
+  -webkit-border-radius: 48px;
+  -moz-border-radius: 48px;
+  -o-border-radius: 48px;
+  border-radius: 48px;
+  color: #666;
+  font-size: 15px;
+  line-height: 48px;
+}
+
 .add-btn {
   width: 100px;
   height: 26px;
@@ -524,12 +547,24 @@ header a.header-right {
   border-radius: 46px;
 }
 
+.border-radius-5 {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+
 .button-wrapper {
+  text-align: center;
   padding: 30px 20px;
 }
 .button-wrapper-02 {
   text-align: center;
   padding: 10px 20px 0;
+}
+.button-wrapper-03 {
+  text-align: center;
+  padding-top: 5px;
 }
 
 .list-item {
@@ -1256,4 +1291,138 @@ body.has-color {
   color: #999;
   font-size: 14px;
   line-height: 16px;
+}
+
+.send-friend-wrapper {
+  padding: 10px 30px 30px;
+}
+.send-friend-wrapper .send-friend-box {
+  background: #fff;
+  overflow: hidden;
+  margin-bottom: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+}
+.send-friend-wrapper .send-friend-box .user-xx-top {
+  padding: 25px 30px;
+  border-bottom: 2px solid #f6f3ff;
+}
+.send-friend-wrapper .send-friend-box .user-xx-top .user-img {
+  width: 37px;
+  height: 37px;
+  -webkit-border-radius: 37px;
+  -moz-border-radius: 37px;
+  -o-border-radius: 37px;
+  border-radius: 37px;
+}
+.send-friend-wrapper .send-friend-box .user-xx-top .user-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.send-friend-wrapper .send-friend-box .user-xx-top .user-name {
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+  line-height: 37px;
+}
+.send-friend-wrapper .send-friend-box .midder-code {
+  text-align: center;
+  padding: 25px 0;
+}
+.send-friend-wrapper .send-friend-box .midder-code .code {
+  display: inline-block;
+}
+.send-friend-wrapper .send-friend-box .footer-tips {
+  text-align: center;
+  font-weight: bold;
+  border-top: 2px solid #f6f3ff;
+  color: #333;
+  font-size: 14px;
+  line-height: 68px;
+}
+
+/*
+ * 钱包
+ */
+.wallet-index-wrapper {
+  padding: 30px;
+  background: #fff;
+}
+.wallet-index-wrapper .wallet-img {
+  height: 49px;
+  text-align: center;
+}
+.wallet-index-wrapper h2 {
+  text-align: center;
+  padding-top: 15px;
+  color: #333;
+  font-size: 30px;
+  line-height: 36px;
+}
+.wallet-index-wrapper .recharge-tip {
+  color: #999;
+  font-size: 14px;
+  line-height: 16px;
+}
+.wallet-index-wrapper .recharge-box {
+  padding-top: 20px;
+  position: relative;
+}
+.wallet-index-wrapper .recharge-box span {
+  width: 1em;
+  float: left;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.wallet-index-wrapper .recharge-box input {
+  max-width: 100%;
+  display: block;
+  padding: 0 20px;
+  color: #ff1818;
+  font-size: 26px;
+  line-height: 26px;
+}
+
+.wallet-list {
+  padding: 0 20px;
+}
+.wallet-list li {
+  margin-bottom: 15px;
+}
+.wallet-list li a {
+  display: block;
+  background: #fff;
+  padding: 18px 24px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+.wallet-list li a h1 {
+  font-weight: bold;
+  color: #666;
+  font-size: 18px;
+  line-height: 24px;
+  padding-bottom: 4px;
+}
+.wallet-list li a p {
+  padding-bottom: 4px;
+  color: #666;
+  font-size: 12px;
+  line-height: 16px;
+}
+.wallet-list li a h4 {
+  text-align: right;
+  font-weight: bold;
+  color: #666;
+  font-size: 18px;
+  line-height: 24px;
 }

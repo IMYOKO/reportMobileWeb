@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<meta name="keywords" content="" />
+    <meta name="description" content="" />
+	<title>报告</title>
+	<link rel="stylesheet" href="css/index.css"/>
+</head>
+<body class="has-color">
+<header class="header">
+	<div class="midder-wrapper">
+		<a href="javascript:history.back(-1);" class="back">
+			<i class="go-back"></i>
+		</a>
+		<h1>报告</h1>
+	</div>
+</header>
+<div class="height-54"></div>
+<div class="send-friend-wrapper">
+	<div class="send-friend-box">
+		<div class="user-xx-top clearfix">
+			<div class="user-img float-left">
+				<img src="images/user-img-01.png" width="37" height="37"/>
+			</div>
+			<div class="user-name float-right">张三峰</div>
+		</div>
+		<div class="midder-code">
+			<div id="code" class="code"></div>
+		</div>
+		<div class="footer-tips">在资料包上扫一扫查看报告</div>
+	</div>
+	<div class="button-wrapper-03">
+		<a href="javascript:;" class="form-sumbit-btn border-radius-5 walletBgColor">发送给朋友</a>
+	</div>
+</div>
+<!--js star-->
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.qrcode.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var str = window.location.href;
+		console.log(str);
+		if(str!=''){
+			$("#code").qrcode({ 
+			    render: "table", //table方式 
+			    width: 200, //宽度 
+			    height: 200, //高度 
+			    text: str //链接地址 
+			}); 
+		}
+	});
+</script>
+<!--js end-->
+</body>
+</html>

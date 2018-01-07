@@ -1,0 +1,67 @@
+@charset "utf-8";
+/*
+ * 钱包
+ */
+
+.wallet-index-wrapper {
+    padding: 30px;
+    background: #fff;
+    .wallet-img {
+        height: 49px;
+        text-align: center;
+    }
+    h2 {
+        text-align: center;
+        padding-top: 15px;
+        @include font-size(#333,30px,36px);
+    }
+    
+    //充值
+    .recharge-tip {
+        @include font-size(#999,14px,16px);
+    }
+    .recharge-box {
+        padding-top: 20px;
+        position: relative;
+        span {
+            width: 1em;
+            float: left;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        input {
+            max-width: 100%;
+            display: block;
+            padding: 0 20px;
+            @include font-size(#ff1818,26px,26px);
+        }
+    }
+}
+
+.wallet-list {
+    padding: 0 20px;
+    li {
+        margin-bottom: 15px;
+        a {
+            display: block;
+            background: #fff;
+            padding: 18px 24px;
+            @include border-radius(5px);
+            h1 {
+                font-weight: bold;
+                @include font-size(#666,18px,24px);
+                padding-bottom: 4px;
+            }
+            p {
+                padding-bottom: 4px;
+                @include font-size(#666,12px,16px);
+            }
+            h4 {
+                text-align: right;
+                font-weight: bold;
+                @include font-size(#666,18px,24px);
+            }
+        }
+    }
+}
